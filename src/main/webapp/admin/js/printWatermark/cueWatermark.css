@@ -1,0 +1,45 @@
+@charset "ISO-8859-1";
+
+.watermarked {
+  position: relative;
+  overflow: hidden;
+}
+
+/* .watermarked img {
+  width: 100%;
+} */
+
+.watermarked::before {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: block;
+    /* width: 150%;
+    height: 150%; */
+    /* transform: rotate(-35deg); */
+    content: attr(data-watermark);   
+    opacity: 0.7;
+    line-height: 2.2em;
+    letter-spacing: 2px;
+    color: lightgrey;
+    z-index:-1;
+    text-align: justify;
+}
+
+/* start thead fixed and scroll only tbody */
+.report_print tbody {
+    display:block;
+    max-height:500px;
+    overflow-y:scroll;
+    width:100%; 
+}
+.report_print thead, .report_print tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+.report_print thead {
+    width:100%; 
+}
+
+/* end thead fixed and scroll only tbody */

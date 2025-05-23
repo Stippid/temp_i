@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp spec="1.0+" codebase="" href="">
+    <information>
+        <title>AFMS Authentication</title>
+        <vendor>BISAG</vendor>
+        <icon href="/login/indian_Army.jpg"/>
+        <offline-allowed/>
+    </information>
+    <resources>
+        <!-- Application Resources -->
+        <j2se version="1.6+" href=
+           "http://java.sun.com/products/autodl/j2se"/>
+        <jar href="http://localhost:8089/prepare_miso_deploy_15-05-2020_signed.jar"
+            main="true" />
+
+    </resources>
+    <application-desc
+         name="AFMS Authentication"
+         main-class="com.mycompany.prepare_miso.MISOPKIJAVA"
+         width="300"
+         height="300">
+     </application-desc>
+     <update check="background"/>
+	<security>
+		<all-permissions/>
+	</security>
+</jnlp>

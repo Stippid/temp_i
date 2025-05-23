@@ -1,0 +1,111 @@
+@charset "ISO-8859-1";
+
+.watermarked {
+  position: relative;
+  overflow: hidden;
+}
+
+/* .watermarked img {
+  width: 100%;
+} */
+
+.watermarked::before {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: block;
+    content: attr(data-watermark);   
+    opacity: 0.5;
+    line-height: 2.2em;
+    letter-spacing: 2px;
+    color: #ecf2f9;
+    z-index: 0;
+    text-align: justify;
+}
+thead { display: table-header-group; } 
+tfoot { display: table-footer-group; }  
+
+.dataTables_info,
+.dataTables_paginate.paging_full_numbers a,
+.print_btn,.dataTables_filter,
+#applicanttbl_length{
+	display:none;
+}
+.header{
+  display: table-header-group !important;
+}
+.footer {
+  display: table-footer-group !important;
+}
+table th{
+  color:#000;
+} 
+.header h4, .footer h4{
+  font-size:9px !important;
+}
+@media print {
+ .header{
+    display: table-header-group !important;
+ }
+ .footer {
+  display: table-footer-group !important;
+}
+  }
+  
+  
+  
+
+/* New css for Critearia */
+
+.dataTable {
+    table-layout: fixed;
+    border-collapse: collapse !important;
+    width: 100% !important;
+    border: 0;
+}
+
+table.dataTable,
+table.dataTable th,
+table.dataTable td {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100% !important;
+    text-align: left;
+    border-color: #9c9696;
+}
+
+.DataTables_sort_wrapper {
+    width: 100%;
+}
+
+.dataTables_scrollBody,
+.dataTables_scrollHead {
+    overflow: visible !important;
+}
+
+table.dataTable tr.odd {
+    background-color: #f0e2f3;
+}
+
+table.dataTable thead {
+    background-color: #9c27b0;
+    color: white;
+    font-weight: bold;
+}
+
+.dataTables_info {
+    color: #9c27b0 !important;
+    font-weight: bold;
+}
+.dataTables_scrollHeadInner {
+    width: 100% !important;
+    padding-right: 0 !important;
+}
+.dataTables_wrapper{
+	position: relative;
+}
+.watermarked.datatable_watermark::before{
+	z-index: 0;
+	color: #e6e5e5 !important;
+}  

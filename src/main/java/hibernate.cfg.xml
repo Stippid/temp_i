@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- Database connection settings -->
+		<property name="connection.driver_class">
+			org.postgresql.Driver
+		</property>
+		
+		<property name="connection.url">
+		   	jdbc:postgresql://192.168.15.126:5434/IT_ASSET_AFMS
+		</property>
+	<property name="connection.username">postgres</property>
+		<property name="connection.password">Bisag@321</property>
+		
+		<!-- JDBC connection pool (use the built-in) -->
+		<property name="connection.pool_size">1000</property>
+
+		<!-- SQL dialect -->
+		<property name="dialect">
+			org.hibernate.dialect.PostgreSQLDialect
+		</property>
+
+		<!-- Enable Hibernate's automatic session context management -->
+		<property name="current_session_context_class">thread</property>
+
+		<!-- Disable the second-level cache  -->
+		<property name="cache.provider_class">
+			org.hibernate.cache.NoCacheProvider
+		</property>
+
+		<!-- Echo all executed SQL to stdout -->
+		<property name="show_sql">false</property>
+
+		<!-- Drop and re-create the database schema on startup -->
+		<property name="hbm2ddl.auto">update</property>
+		<!-- <property name="hbm2ddl.auto">validate</property> -->
+		
+		 
+		 <!-- Start Login Model -->
+		<mapping class="com.models.Role" />
+		<mapping class="com.models.UserAttempts" />
+		<mapping class="com.models.UserLogin" />
+		<mapping class="com.models.UserRole" />
+		<mapping class="com.models.login.Tb_HTover"/>
+		<mapping class="com.models.login.Tb_OCSP_Verify_Users"/>
+		
+		<!-- End Login Model -->
+		
+		<!-- Start Help Desk -->
+		<mapping class="com.models.Helpdesk.HD_TB_BISAG_TICKET_GENERATE"/>
+		<mapping class="com.models.Helpdesk.HD_TB_BISAG_USER_LOGIN_COUNT_INFO"/>
+		<mapping class="com.models.Helpdesk.HD_TB_BISAG_USER_INFO"/>
+		<mapping class="com.models.Helpdesk.HD_TB_BISAG_FAQ"/>
+		<mapping class="com.models.Helpdesk.HD_MARQUEE" />
+		<!-- END Help Desk -->
+		
+		<mapping class="com.models.TB_LDAP_MODULE_MASTER"/>
+		<mapping class="com.models.TB_LDAP_SCREEN_MASTER"/>
+		<mapping class="com.models.TB_LDAP_SUBMODULE_MASTER"/>
+		<mapping class="com.models.TB_LDAP_ROLE_TYPE"/>
+		<mapping class="com.models.TB_LDAP_ROLEMASTER"/>
+		
+		<mapping class="com.models.Orbat_Unt_Dtl" />
+		<mapping class="com.models.T_Domain_Value" />
+		<mapping class="com.models.Tb_Orbat_Code"/>
+  		<mapping class="com.models.Tb_Orabt_Arm_Code"/>
+		
+				
+<!-- 	Cue Master  -->
+		
+		    <mapping class="com.model.WorkOrder.TB_IT_ASSET_WORK_ORDER" />
+			<mapping class="com.model.WorkOrder.COMPUTING_WORK_ORDER_P" />
+			<mapping class="com.model.WorkOrder.COMPUTING_WORK_ORDER_C" />
+			<mapping class="com.model.WorkOrder.PERIPHERAL_WORK_ORDER_C" />
+
+<!--  it asset --> 
+			
+		<!-- MASTERS -->
+		<mapping class="com.models.itasset.master.TB_MSTR_SECTION" />
+		<mapping class="com.models.itasset.master.TB_MSTR_RAM_M" />
+		<mapping class="com.models.itasset.master.TB_MSTR_TYPE_M" />
+		<mapping class="com.models.itasset.master.TB_MSTR_DPLY_ENV_M" />
+		<mapping class="com.models.itasset.master.TB_MSTR_HDD_M" />
+		<mapping class="com.models.itasset.master.TB_MSTR_SSD_M" />
+		<mapping class="com.models.itasset.master.TB_MSTR_OFFICE_M" />
+		<mapping class="com.models.itasset.master.TB_MSTR_OS_FIRMWARE_M" />
+		<mapping class="com.models.itasset.master.TB_MSTR_OS_M" />
+		<mapping class="com.models.itasset.master.TB_MSTR_PROCESSOR_TYPE_M" />
+		<mapping class="com.models.itasset.master.TB_MSTR_TYPE_OF_HW_M" />
+		<mapping class="com.models.itasset.master.TB_MSTR_UPS_CAPACITY_M" />
+		<mapping class="com.models.itasset.master.TB_MSTR_UPS_TYPE_M" />
+		<mapping class="com.models.itasset.master.TB_MSTR_YEAR_OF_MANUFACTURING_M" />
+		<mapping class="com.models.itasset.master.TB_MSTR_YEAR_OF_PROC_M" />
+		<mapping class="com.models.itasset.master.TB_MSTR_ASSET_M" />
+		
+		<mapping class="com.models.itasset.master.TB_MSTR_PERIPHERAL_TYPE_M" />
+		
+		<mapping class="com.models.itasset.master.TB_MASTER_MODEL" />
+		<mapping class="com.models.itasset.master.TB_MASTER_MAKE" />
+		<mapping class="com.models.itasset.master.TB_MSTR_ASSETS" />
+		<mapping class="com.models.itasset.master.TB_MSTR_ANTIVIRUS_M" />
+		<mapping class="com.models.itasset.master.TB_MASTER_BUDGET" />
+		<mapping class="com.models.itasset.master.TB_MSTR_CONNECTIVITY" />
+		<mapping class="com.models.itasset.master.TB_MSTR_HARDWARE_INTERFACE" />
+		<mapping class="com.models.itasset.master.TB_MSTR_ETHERNET_PORT" />
+		<mapping class="com.models.itasset.master.TB_MSTR_MANAGEMENT_LAYER" />
+		<mapping class="com.models.itasset.master.TB_MSTR_NETWORK_FEATURES" />
+		
+		
+		<mapping class="com.models.itasset.master.TB_ORBAT_LINE_DTE"/>
+
+		
+		<!-- MASTERS -->
+		<!-- ASSETS -->
+		<mapping class="com.models.itasset.assets.Assets_Main" />
+				<mapping class="com.models.itasset.assets.Assets_Child" />
+		<mapping class="com.models.assets.It_Asset_Peripherals" />
+		<mapping class="com.models.assets.CONSUMABLES_MAIN" />
+		<mapping class="com.models.assets.It_Asset_Inter_Unit_Trnsf_Comp" />
+			<mapping class="com.models.assets.It_Asset_Inter_Unit_Trnsf_Perif" />
+		<!-- ASSETS -->
+		<mapping class="com.models.assets.TB_PERIPHERAL_CHILD" />
+		<mapping class="com.models.assets.CONSUMABLES_CHILD" />
+	    <mapping class="com.models.MMS_TB_MLCCS_NEW_REQ"/>
+		 <mapping class="com.models.MMS_Domain_Values"/>
+			    
+			    
+	<mapping class="com.models.itasset.master.TB_MASTER_MAINTENANCE_AGENCY" />
+	<mapping class="com.models.itasset.master.TB_MASTER_SUPPLY_MASTER" />
+	
+		<mapping class="com.models.itasset.master.TB_MASTER_RANK" />
+		
+		<mapping class="com.models.itasset.assets.Assign_Asset_to_user" />
+			<mapping class="com.models.itasset.assets.Peripheral_Asset_Assign_To_User" />
+		
+		
+	
+	
+	</session-factory>
+</hibernate-configuration>

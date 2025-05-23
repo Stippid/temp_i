@@ -1,0 +1,1515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="login"
+		template="/WEB-INF/pages/login/login.jsp"></definition>
+
+	<definition name="myProfileTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/MY_ACCOUNT/my_profile.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="changePasswordTile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/MY_ACCOUNT/changepassword.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="handingTakingOverTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/MY_ACCOUNT/handingTakingOver.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="dashboardAccessLogListTile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/login/dashboardAccessLog.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="base.admin.definition"
+		template="/WEB-INF/pages/admin/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="menu"
+			value="/WEB-INF/pages/admin/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/pages/admin/footer.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<!-- Start Dynamic Menu -->
+	<definition name="role_mstTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/RBAC/mst_role.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="user_mstTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/login/user_mst.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="module_mstTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/login/module_mst.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="sub_module_mstTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/login/sub_module_mst.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="screen_mstTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/login/screen_mst.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+	<definition name="roleTiles" extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/login/roleMstnew.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="AccessTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/error/Access.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="No_Movement_OrbatTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/error/No_Movement_Orbat.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="Edit_user_mstTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/login/edit_user_mst.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="user_statusTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/login/user_status.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="status_of_inactive_user_reportTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/login/status_of_inactive_user_report.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="search_user_mstTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/login/search_user_mst.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<!--End Dynamic Menu -->
+
+	<!-- Strat Error Pages -->
+	<definition name="400" extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/error/400.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="404" extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/error/404.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="405" extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/error/405.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="500" extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/error/500.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="505" extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/error/505.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<!-- End Error Pages -->
+
+	<!-- start Dashboard Tile -->
+	<definition name="commanDashboardTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/Dashboard/commonDashboard.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="superDashboardTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/Dashboard/super_Dashboard.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<!-- end Dashboard tiles -->
+
+	<!-- help desk -->
+	<definition name="HelpDashTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/Dashboard/helpDeskDash/HelpDash.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="helpTiles" extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/helpDesk/help.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="myticketTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/helpDesk/myticket.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	
+	
+	<definition name="user_managementTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/helpDesk/user_management.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="faqinsertTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/helpDesk/faqinsert.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="searchfaqTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/helpDesk/searchfaq.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="faqTiles" extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/helpDesk/faq.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="Edit_faqTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/helpDesk/Edit_faq.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="user_ticketTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/helpDesk/user_ticket.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	
+	
+	<definition name="viewticketTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/helpDesk/view_ticket.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	
+	<definition name="viewticketassignTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/helpDesk/view_assign_ticket.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	
+		<definition name="techapproveTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/helpDesk/techApprove.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+		
+		<definition name="finalviewticketTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/helpDesk/final_view_ticket.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	
+	
+	
+	
+	
+
+	<definition name="marqueeTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/login/marquee.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="UserCreatedTiles"
+		template="/WEB-INF/pages/Dashboard/helpDeskDash/UserCreated.jsp"></definition>
+	<definition name="RoleUrlTiles"
+		template="/WEB-INF/pages/Dashboard/helpDeskDash/RoleUrl.jsp"></definition>
+	<definition name="LoggedInUsersTiles"
+		template="/WEB-INF/pages/Dashboard/helpDeskDash/LoggedInUsers.jsp"></definition>
+	<definition name="TicketStatusNewTiles"
+		template="/WEB-INF/pages/Dashboard/helpDeskDash/TicketStatus.jsp"></definition>
+	<definition name="TicketStatusInProgressTiles"
+		template="/WEB-INF/pages/Dashboard/helpDeskDash/TicketStatus.jsp"></definition>
+	<definition name="TicketStatusCompletedTiles"
+		template="/WEB-INF/pages/Dashboard/helpDeskDash/TicketStatus.jsp"></definition>
+	<definition name="HelpTopicFeedbackTiles"
+		template="/WEB-INF/pages/Dashboard/helpDeskDash/HelpTopicStatus.jsp"></definition>
+	<definition name="HelpTopicFeatureRequestTiles"
+		template="/WEB-INF/pages/Dashboard/helpDeskDash/HelpTopicStatus.jsp"></definition>
+	<!-- help desk end -->
+
+
+	<!-- Start Master -->
+	<definition name="Country_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/Master/Country.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="Edit_Country_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/Master/EditCountry.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="gender_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/Master/Gender.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="Edit_gender_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/Master/EditGender.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="Interest_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/Master/Interest.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="Edit_Interest_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/Master/EditInterest.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="Neurodiversity_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/Master/Neurodiversity.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="Edit_neurodiversity_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/Master/EditNeurodiversity.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="pronouns_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/Master/Pronouns.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="Edit_pronouns_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/Master/EditPronouns.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="hospital_specialist_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/Master/HospitalSpecialist.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="Edit_hospital_specialist_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/Master/EditHospitalSpecialist.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<!-- End Master -->
+
+	<!-- Start Hospital Detail -->
+	<definition name="Hospital_Details_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/Hospital/Hospital_Details.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="Edit_Hospital_Details_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/Hospital/EditHospital_Details.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="mapreportTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/Hospital/map.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+
+
+
+	<!-- It Asserts Start -->
+
+	<!-- IT ASSETS MASTER START -->
+
+
+
+	<!-- MASTER START -->
+
+	<definition name="Ram_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/ram_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+	<definition name="EditRam_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Editram_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Type_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/type_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="EditType_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Edittype_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Dply_env_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/dply_env_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+	<definition name="EditDply_env_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Editdply_env_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Hdd_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/hdd_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Ssd_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/ssd_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="EditHdd_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Edithdd_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="EditSsd_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Editssd_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+
+	<definition name="Office_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/office_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+	<definition name="EditOffice_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Editoffice_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Os_firmware_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/os_firmware_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+
+	<definition name="EditOs_firmware_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Editos_firmware_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Os_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/os_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+	<definition name="EditOs_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Editos_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Processor_or_type_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Processor_or_type.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+	<definition name="EditProcessor_or_type_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/EditProcessor_or_type.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Type_of_hw_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/type_of_hw_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+	<definition name="EditType_of_hw_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Edittype_of_hw_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Ups_capacity_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/ups_capacity_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="EditUps_capacity_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Editups_capacity_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Ups_type_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/ups_type_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="EditUps_type_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Editups_type_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Year_of_manufacturing_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/year_of_manufacturing_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="EditYear_of_manufacturing_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Edityear_of_manufacturing_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Year_of_proc_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/year_of_proc_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="EditYear_of_proc_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Edityear_of_proc_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Asset_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/asset_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+	<definition name="EditAsset_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Editasset_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="PeripheralMaster_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/PeripheralMaster.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="EditPeripheralMaster_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/EditPeripheralMaster.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="model_masterTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/model_master.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Edit_Model_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Edit_Model_Master.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="make_masterTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/make_master.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Edit_Make_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Edit_Make_Master.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="ANTIVIRUS_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/ANTIVIRUS.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="EditANTIVIRUS_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/EditANTIVIRUS.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Connectivity_Tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Connectivity.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Edit_Connectivity_Tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Edit_Connectivity.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Hardware_Interface_Tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Hardware_Interface.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Edit_Hardware_Interface_Tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Edit_Hardware_Interface.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Ethernet_Port_Tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Ethernet_Port.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Edit_Ethernet_Port_Tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Edit_Ethernet_Port.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Management_Layer_Tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Management_Layer.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Edit_Management_Layer_Tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Edit_Management_Layer.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="budget_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/budget_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Editbudget_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Editbudget_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Network_Features_Tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Network_Features.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Edit_Network_Features_Tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Edit_Network_Features.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<!-- MASTER END -->
+
+
+	<definition name="MainAssetsTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Transaction/Computing.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	
+	
+		<definition name="AssignuserTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Transaction/assign_asset_to_user.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	
+	
+			<definition name="EditAssignuserTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Transaction/Edit_assign_asset_to_user.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	
+	
+	
+	
+			<definition name="PeripheralAssignuserTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Transaction/assign_peripherals_to_user.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	
+	
+	
+	<definition name="PeripheralsTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Transaction/Peripherals.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="ConsumablesTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Transaction/Consumables.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="SearchAssetsTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Assets/Search_Computing_Assets.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	
+	
+	<definition name="SearchAssetsAssignTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Assets/Search_Asset_Assign_User.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	
+	
+		
+	<definition name="SearchperipheralAssetsAssignTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Assets/Search_peripheral_asset_assign_user.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+	<definition name="SearchPeripheralTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Assets/Search_Peripheral.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="SearchConsumableTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Assets/Search_Consumable.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="SearchDeleteAssetsTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Assets/SearchDelete_Computing_Assets.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="SearchDeletePeripheralTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Assets/SearchDelete_Peripheral.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="ViewAssetsTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Assets/View_Computing_Assets.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="ViewPeripheralsTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Assets/View_Peripherals.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="InterUnitTrnsfTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Transaction/Inter_unit_transfer.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="InterUnitTrnsfSearchTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Transaction/Inter_unit_transfer_Search.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<!-- It Asserts End -->
+
+	<!-- Start Work Order -->
+
+	<definition name="Create_Workorder_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/WorkOrder/Create_workorder.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Work_Order_Search_Computing_Asset_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/WorkOrder/Work_Order_Search_Computing_Asset.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Computing_Asset_WO_Tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/WorkOrder/Computing_Asset.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Work_Order_Search_Peripheral_Asset_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/WorkOrder/Work_Order_Search_Peripheral_Asset.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Peripheral_Asset_WO_Tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/WorkOrder/Peripheral_Asset.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="PopUp_WO_History_Computing_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/WorkOrder/Pop_Up_Work_Order_History_Computing_Asset.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="PopUp_WO_History_Peripheral_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/WorkOrder/Pop_Up_Work_Order_History_Peripheral_Asset.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<!-- End Work Order -->
+
+
+	<definition name="AppPeripheralTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Assets/Edit_Peripheral_App.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="AppSearchPeripheralTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Assets/App_Search_Peripheral.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+	<definition name="SearchAPPAssetsTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Assets/SearchAsset.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+	<definition name="AppMainAssetsTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Assets/EditComputingAssets.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Demo_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Assets/demo.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+	<definition name="Assets_Serviceablity_details_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Report/Assests_Serviceability.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="IT_Assets_Serviceable_Unserviceable_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Report/IT_Assets_Serviceable_Unserviceable.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Assets_Peripherals_details_tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Report/Peripheral_Assets_Report.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+	<!-- Start Hardware -->
+
+	<definition name="AddhardwareTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Assets/Edit_new_hardware.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="SearchHardwareTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Assets/Search_new_hardware.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+	<definition name="AddhardwarePeripheralTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Assets/Edit_Peripheral_hardware.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="SearchHardwarePeripheralTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Assets/Search_peripheral_hardware.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<!-- End Hardware -->
+
+	<!-- Start Report -->
+
+	<definition name="All_India_Holding_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Report/All_India_Holding.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Asset_all_india_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Report/Asset_All_India.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="All_India_Holding_Less_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Report/All_india_Holding_Less.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Unserviceable_Report_tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Report/Unserviceable_Report.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<!-- End Report -->
+
+	<!-- Import Data -->
+	<definition name="computingimportdataTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Import/Computing_Assets_ImportData.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="peripheralimportdataTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Import/Peripheral_ImportData.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+	<!-- End Import Data -->
+
+	<definition name="onHoldingDashboardTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Deshboard/deshboard.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+	<definition name="warrantyDashboardTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Deshboard/deshboard_warranty.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+	<definition name="antivirusDashboardTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Deshboard/deshboard_antivirus.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+	<definition name="ADNDashboardTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Deshboard/deshboard_ADN.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="aVehicleDashboardTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Deshboard/aVehicle.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+	<definition name="bVehicleDashboardTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Deshboard/bVeheicle.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+	<definition name="cVehicleDashboardTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Deshboard/cVehicle.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="make_master_otherTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/make_master_other.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="model_master_otherTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/model_master_other.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Processor_or_type_other_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Processor_or_type_other.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Os_mstr_Other_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/os_mstr_other.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+	<definition name="Office_mstr_other_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/office_mstr_Other.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+	<definition name="Type_of_hw_other_mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/type_of_hw_mstr_Other.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+	<definition name="Type_mstr_other_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/type_mstr_other.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+	<definition name="conncectivity_master_otherTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Connectivity_other.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="Work_Order_Search_Computing_Asset_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/WorkOrder/Work_Order_Search_Computing_Asset.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Computing_Asset_WO_Tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/WorkOrder/Computing_Asset.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Work_Order_Search_Peripheral_Asset_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/WorkOrder/Work_Order_Search_Peripheral_Asset.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Peripheral_Asset_WO_Tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/WorkOrder/Peripheral_Asset.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Section_Mstr_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Section_Mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="EditSECTION_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Edit_Section.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+
+	<definition name="MAINTENANCE_AGENCY_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Maintenance_Agency.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="EditMAINTENANCE_AGENCY_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/EditMaintenanceAgency.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="LogBooktiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/LogBook/LogBook.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+
+
+
+	<definition name="ViewConsumablesTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Assets/view_consumable.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Search_Workorder_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/WorkOrder/Search_WorkOrder.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+	<definition name="RequestConsumableTiles" extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body" value="/WEB-INF/pages/It_Assets/Transaction/request_consumable.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	
+	<definition name="IssueConsumableTiles" extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body" value="/WEB-INF/pages/It_Assets/Transaction/issue_consumables.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+
+
+	<definition name="Supply_Master_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Supply_master.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+
+	<definition name="Edit_Supply_Master_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Edit_Supply_mstr.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	<definition name="Create_Approve_Stock_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Stock_Control/Approve_Stock.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	
+		<definition name="Issue_Asset_Tiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/Stock_Control/Issue_Asset.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	
+	
+	<definition name="RANK_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/Rank_Master.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	
+		<definition name="EditRANK_tile"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/It_Assets/master/EditRank.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	
+	
+		<definition name="viewuserticketTiles"
+		extends="base.admin.definition">
+		<put-attribute name="title" value="Admin Home" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/helpDesk/view_user_ticket.jsp" />
+		<put-attribute name="menuselection" value="home" />
+	</definition>
+	
+	
+	<!-- End Hospital Detail -->
+</tiles-definitions>

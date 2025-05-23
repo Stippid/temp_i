@@ -1,0 +1,361 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:component-scan
+		base-package="com.controller.*" />
+
+	<mvc:annotation-driven validator="validator">
+		<mvc:argument-resolvers>
+			<bean
+				class="com.github.dandelion.datatables.extras.spring3.ajax.DatatablesCriteriasMethodArgumentResolver" />
+		</mvc:argument-resolvers>
+	</mvc:annotation-driven>
+
+	<mvc:resources mapping="/admin/js/**"
+		location="/admin/js/" cache-period="31556926" />
+	<mvc:resources mapping="/login_file/**"
+		location="/admin/login_file/" cache-period="31556926" />
+	<mvc:resources mapping="/dandelion/**"
+		location="classpath:/META-INF/resources/dandelion/"
+		cache-period="31556926" />
+
+	<!-- Apache Tiles -->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass">
+			<value>
+				org.springframework.web.servlet.view.tiles3.TilesView
+			</value>
+		</property>
+		<property name="order" value="0" />
+	
+	</bean>
+	<bean id="tilesConfigurer"
+		class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<property name="definitions">
+			<list>
+				<value>/WEB-INF/tiles.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="classpath:global" />
+		<property name="defaultEncoding" value="UTF-8" />
+	</bean>
+	<!-- Localization of hibernate messages during validation! -->
+	<bean id="validationMessageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="classpath:validation" />
+	</bean>
+
+	<bean id="validator"
+		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="validationMessageSource">
+			<ref bean="validationMessageSource" />
+		</property>
+	</bean>
+
+
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- setting maximum upload size -->
+		<!-- the maximum file size in bytes (2097152 B = 2 MB) -->
+		<property name="maxUploadSize" value="52428800" />
+	</bean>
+<!-- 2097152000 -->
+	<bean id="dataSourceNA"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"
+			value="org.postgresql.Driver" />
+		<property name="url" value="jdbc:postgresql://192.168.15.126:5434/IT_ASSET_AFMS" />
+<!-- 		<property name="url" value="jdbc:postgresql://192.168.56.101:1105/IT_ASSET_AFMS" /> -->
+			
+
+
+
+		<property name="username" value="postgres" />
+		<property name="password" value="Bisag@321" />
+	</bean>
+
+
+
+	<bean id="RoleBaseMenuDAO"
+		class="com.dao.login.RoleBaseMenuDAOImpl">
+		<property name="dataSource" ref="dataSourceNA" />
+	</bean>
+
+
+
+	<!-- help desk -->
+	<bean id="HelpDAO" class="com.dao.helpDesk.HelpDAOImpl">
+		<property name="dataSource" ref="dataSourceNA" />
+	</bean>
+
+	<!-- help desk end -->
+
+
+
+	<!--it asset starts -->
+	<!-- MASTERS START -->
+	<bean id="Ram_mstrDAO"
+		class="com.dao.itasset.masters.Ram_mstrDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="Type_mstrDAO"
+		class="com.dao.itasset.masters.Type_mstrDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="Dply_env_mstrDAO"
+		class="com.dao.itasset.masters.Dply_env_mstrDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="Hdd_mstrDAO"
+		class="com.dao.itasset.masters.Hdd_mstrDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="Ssd_mstrDAO"
+		class="com.dao.itasset.masters.Ssd_mstrDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="Office_mstrDAO"
+		class="com.dao.itasset.masters.Office_mstrDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="Os_firmware_mstrDAO"
+		class="com.dao.itasset.masters.Os_firmware_mstrDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="Os_mstrDAO"
+		class="com.dao.itasset.masters.Os_mstrDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="Processor_or_typeDAO"
+		class="com.dao.itasset.masters.Processor_or_typeDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="Type_of_hw_mstrDAO"
+		class="com.dao.itasset.masters.Type_of_hw_mstrDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="Ups_capacity_mstrDAO"
+		class="com.dao.itasset.masters.Ups_capacity_mstrDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="Ups_type_mstrDAO"
+		class="com.dao.itasset.masters.Ups_type_mstrDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="Year_of_manufacturing_mstrDAO"
+		class="com.dao.itasset.masters.Year_of_manufacturing_mstrDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="Year_of_proc_mstrDAO"
+		class="com.dao.itasset.masters.Year_of_proc_mstrDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="Asset_mstrDAO"
+		class="com.dao.itasset.masters.Asset_mstrDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="PeripheralMasterDAO"
+		class="com.dao.itasset.masters.PeripheralMasterDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="ModelDAO" class="com.dao.itasset.masters.ModelDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+
+	<bean id="Make_Dao" class="com.dao.itasset.masters.Make_DaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="ANTIVIRUSDAO"
+		class="com.dao.itasset.masters.ANTIVIRUSDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="Connectivity_DAO"
+		class="com.dao.itasset.masters.Connectivity_DAOimpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="Hardware_interface_DAO"
+		class="com.dao.itasset.masters.Hardware_interface_DAOimpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="Ethernet_Port_DAO"
+		class="com.dao.itasset.masters.Ethernet_Port_DAOIMPL">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="Management_Layer_DAO"
+		class="com.dao.itasset.masters.Management_Layer_DAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="Budget_mstrDAO"
+		class="com.dao.itasset.masters.Budget_mstrDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="Network_Features_DAO"
+		class="com.dao.itasset.masters.Network_Features_DAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- MASTERS END -->
+
+
+
+	<bean id="computing_assets_DAO"
+		class="com.dao.Assets.computing_assets_DAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+
+	<!-- Start Inter Unit Transfer -->
+	<bean id="interUnitTransf_DAO"
+		class="com.dao.Assets.interUnitTransf_DAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+
+	<!-- END Inter Unit Transfer -->
+
+	<bean id="Assests_Serviceablity_details_DAO"
+		class="com.dao.itasset.Report.Assests_Serviceablity_details_DAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="WOComputing_Asset_Dao"
+		class="com.dao.WorkOrder.WOComputing_Asset_DaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="WOPeripheral_Asset_Dao"
+		class="com.dao.WorkOrder.WOPeripheral_Asset_DaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<!-- START REPORT -->
+
+	<bean id="IT_Assets_Serviceable_Unserviceable_DAO"
+		class="com.dao.itasset.Report.IT_Assets_Serviceable_Unserviceable_DAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="UnserviceableDao"
+		class="com.dao.itasset.Report.UnserviceableDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- END REPORT -->
+
+	<!-- Start Hardware -->
+
+	<bean id="Hardware_DAO" class="com.dao.Assets.Hardware_DAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="Peripheral_Hardware_DAO"
+		class="com.dao.Assets.Peripheral_Hardware_DAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<!-- End Hardware -->
+
+
+	<!-- Start Report -->
+
+	<bean id="All_India_holdingDao"
+		class="com.dao.itasset.Report.All_India_holdingImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="Asset_All_India_Dao"
+		class="com.dao.itasset.Report.Asset_All_India_DaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="All_India_Holding_LessDao"
+		class="com.dao.itasset.Report.All_India_Holding_LessDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+
+	<!-- Start Deshboard -->
+
+	<bean id="DashboardDao"
+		class="com.dao.it_asset_dashboard.DashboardDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- End Deshboard -->
+	<bean id="PeripheralDao"
+		class="com.dao.Peripheral.PeripheralDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="ConsumablesDao"
+		class="com.dao.Assets.ConsumablesDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="mmsCommonDAO" class="com.dao.mms.Mms_Common_DAOImpl">
+		<property name="dataSource" ref="dataSourceNA" />
+	</bean>
+
+
+	<bean id="CueDashboardDAO"
+		class="com.dao.Dashboard.CueDashboardDAOImpl">
+		<property name="dataSource" ref="dataSourceNA" />
+	</bean>
+	<bean id="AllMethodsDAO" class="com.dao.orbat.AllMethodsDAOImp">
+		<property name="dataSource" ref="dataSourceNA" />
+	</bean>
+	
+	<bean id="SECTIONDAO"
+		class="com.dao.itasset.masters.SECTIONDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+
+	<bean id="Maintenance_Agency_DAO"
+		class="com.dao.itasset.masters.Maintenance_Agency_DAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="LogBookDao" class="com.dao.LogBook.LogBookDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="Supply_MasterDAO"
+		class="com.dao.itasset.masters.Supply_MasterDAOIMPL">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+		<bean id="RANKDAO"
+		class="com.dao.itasset.masters.RANKDAOImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+</beans>

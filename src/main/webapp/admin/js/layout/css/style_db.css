@@ -1,0 +1,299 @@
+html{
+    box-sizing: border-box;
+}
+body{
+    background-color: #b7c7b8;
+}
+.content{
+	top: 105px;
+}
+.margin_dash
+{
+	margin-top:-80px
+	
+}
+/* .main_section{
+    position: relative;
+    height: 550px;
+    overflow-y: scroll;
+} */
+/* #chartdiv,
+#chartdiv1{
+    width: 100%;
+    height: 290px;
+} */
+.chartsize{
+    width: 100%;
+    height: 290px;
+}
+.chart_name h4{
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 0;
+}
+h6.align-heading {
+    margin-top: 50% !important;
+}
+
+
+
+.stacked_column_part{
+    margin-bottom: 30px;
+}
+.stacked_column_part .col-md-9,
+.semicircle_pie_chart .col-md-9{
+    background-color: #fff;
+}
+.stacked_column_part .col-md-2{
+    background-image: linear-gradient(to bottom,rgb(147,194,150),rgb(130,182,134),rgb(79,137,84));
+    border-bottom-left-radius: 300px;
+    border-top-left-radius: 300px;
+}
+.semicircle_pie_chart .col-md-2{
+    background-image: linear-gradient(to bottom,rgb(147,194,150),rgb(130,182,134),rgb(79,137,84));
+    border-bottom-right-radius: 300px;
+    border-top-right-radius: 300px;
+}
+/* Start  tunnel Design */
+.tunnel_design{
+   /*  position: fixed; */
+    /* margin: 10px auto; */
+    z-index: 1;
+    width: 100%;
+    background-color: #b7c7b8;
+    /* padding: 30px; */
+    text-align: center;
+    display: block;
+}
+.tunnel_design.row{
+    justify-content: center;
+}
+.square{
+    height: 50px;
+    width: 100px;
+    background-color: #93ab95;
+    position: relative;
+    left: 30px;
+    display: inline-block;
+    margin-right: 35px;
+}
+.square:before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 25px solid #93ab95;
+    border-left: 25px solid transparent;
+    border-bottom: 25px solid #93ab95;
+    position: relative;
+    display: block;
+    left: -25px;
+}
+.square:after {
+    border-bottom: 25px solid #93ab95;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    content: "";
+    height: 0;
+    right: -37px;
+    position: absolute;
+    top: 13px;
+    width: 0;
+    transform: rotate(90deg);
+}
+.tunnel_text{
+    position: absolute;
+    font-size: 14px !important;
+    top: 15px;
+    left: 16px;
+    color: #fff;
+    word-break: break-word;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.square.tunnel_visited{
+    background-color:#008000;
+}
+.square.tunnel_visited:before{
+    border-bottom-color: #008000;
+    border-top-color: #008000;
+}
+.square.tunnel_visited:after{
+    border-bottom-color: #008000;
+}
+.square.tunnel_active{
+    background-color:#f4ee3a;
+}
+.square.tunnel_active:before{
+    border-bottom-color: #f4ee3a;
+    border-top-color: #f4ee3a;
+}
+.square.tunnel_active:after{
+    border-bottom-color: #f4ee3a;
+}
+.tunnel_active h5{
+    color: #000;
+}
+.stacked_column_part .dropdown{
+    float: right;
+}
+.stacked_column_part h6{
+    text-align: right;
+    margin-top: 25px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.semicircle_pie_chart h6{
+    color: #fff;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+@font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.eot?75022950');
+    src: url('../font/fontello.eot?75022950#iefix') format('embedded-opentype'),
+         url('../font/fontello.woff2?75022950') format('woff2'),
+         url('../font/fontello.woff?75022950') format('woff'),
+         url('../font/fontello.ttf?75022950') format('truetype'),
+         url('../font/fontello.svg?75022950#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+  /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+  /*
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+      font-family: 'fontello';
+      src: url('../font/fontello.svg?75022950#fontello') format('svg');
+    }
+  }
+  */
+   
+   [class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+   
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+   
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+   
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+   
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+   
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+   
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+   
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  }
+   
+  .icon-home:before { content: '\e802'; } /* '' */
+
+.demo-icon.icon-home{
+    float: right;
+    font-size: 30px;
+    border: 4px solid #72a376;
+    background-color: #88ba8c;
+    position: relative;
+    top: -10px;
+    z-index: 11;
+}
+.chart_section{
+    position: relative;
+    /* top: 130px; */
+    /* width: 80%; */
+    display: block;
+    margin: 0 auto;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+input{
+    width: 80px;
+    background-color: transparent;
+    border: 1px solid #4f1919;
+}
+label{
+    color: #fff;
+}
+.btn-secondary{
+    background-color: #4f1919 !important;
+    border-color: #4f1919 !important;
+}
+.main_section .dropdown{ 
+	cursor:pointer;
+    position: relative;
+    display: inline-block;
+}
+.dropbtn {
+  cursor:pointer;
+  border: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #6c7f77;
+  border: 1px solid #fff;
+  min-width: 250px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  display: block;
+  padding: 8px;
+}
+.dropdown-content a:last-child{
+	border-bottom: 0;
+}
+.dropdown-content a:hover {background-color: #8fbf92;}
+.main_section .dropdown:hover .dropdown-content {display: block;}
+.main_section .dropdown:hover{background-color: #fbf52c;}
+.main_section .dropdown:hover:before{
+   border-bottom-color: #fbf52c;
+   border-top-color: #fbf52c;
+}
+.main_section .dropdown:hover:after {
+    border-bottom-color: #fbf52c;
+}
+.select_menu{
+    display: flex;
+    align-items:center;
+    /*padding-top: 5px;*/
+    margin-bottom: 5px;
+}
+.select_menu h5{
+	color: #fff;
+	padding-right: 10px;
+}

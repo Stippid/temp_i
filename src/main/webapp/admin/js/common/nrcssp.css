@@ -1,0 +1,341 @@
+.nrTableHeading
+{
+	background-color:transparent;
+	color:black;
+	Text-align:CENTER;
+	Font-Size:22px;
+	font-weight:bold;
+	line-height: 33px !important;
+	text-decoration:underline;
+	width:100%;
+}
+
+
+	Table .nrTableData th {
+		font-size: 0px;
+	}
+	
+	#nrTable {
+		color: navy;
+		border-spacing: 0px;	
+		Font-Size:14px;
+		line-height:200%;
+		border-collapse: collapse;
+		/* background-color:mintcream; */
+		white-space: normal;
+		overflow-y:scroll;
+		overflow-x:hidden;
+		z-index:auto;
+	}
+
+	#nrTable tr td {
+		border: .5px dotted lightgrey;
+		Font-Size:12px;
+		line-height:100%;
+		padding-top:5px;
+		padding-bottom:5px;
+		padding-left: 2px; 
+		white-space: normal;
+		word-wrap: break-word;
+	}
+
+	#nrTable tbody tr {
+		font-size:12px;
+		z-index:auto;
+	}
+	
+	#nrTablee {
+		color: black;
+		Font-Size:12px;
+		line-height:200%;
+		border-collapse: collapse;
+		background-color:transparent;
+		border:1px solid lightgrey;
+		border-style: solid;
+/*   		border-width: 1px 1px 1px 1px;
+ */  		border-width:thin;
+	}
+
+	#nrTablee tr td {
+		border: 1px solid lightgrey;
+		border-width:thin;
+		Font-Size:12px;
+		line-height:100%;
+		padding-top:5px;
+		padding-bottom: 5px;
+		padding-left: 3px;
+	}
+
+	#nrTablee tbody tr {
+		border: 1px solid lightgrey;
+		font-size:12px;
+	  	white-space: wrap;
+	  	border-width:thin;
+	}
+	
+	
+
+thead {display:table-header-group;}
+
+tfoot {display:table-footer-group;}
+
+.page {page-break-after:always;positon:fixed;}
+
+.nkpageportn {
+  width: 21cm;
+  min-height: 29.7cm;
+  padding: .3cm;
+  margin: .3cm auto;
+  border: 1px #D3D3D3 solid;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.nkpagelandn {
+  width: 29.7cm;
+  min-height: 21cm;
+  padding: .5cm;
+  margin: 1cm auto;
+  border: 1px #D3D3D3 solid;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.nrcontainer {
+  width: 1000px;
+  padding-right:5px;
+  padding-left:5px;
+  margin-right:auto;
+  margin-left:auto;
+  table-layout:relative;
+}
+
+.nrwm {
+	position:fixed;
+	top:80%;
+	left:5%;
+	heigth:95%;
+	text-align:center;	
+	opacity:0.5;
+	z-index:99;
+	color:lightblue;
+	font-size:90px;
+	border:1px solid red;
+	-webkit-transform:rotate(-45deg);
+	-moz-transform:rotate(-45deg);
+	-ms-transform:rotate(-45deg);
+	display:inblock;
+}
+
+.projheading
+{
+	background-color:transparent;
+	color:blue;
+	text-shadow: 5px 5px 5px yellow;
+	Text-align:CENTER;
+	Font-Size:45px;
+	Font:45px "Times New Roman";
+	font-weight:bold;
+	line-height: 40px !important;
+	
+} 
+
+.nkpageport {
+  width: 20cm;
+  min-height: 25cm;
+  padding: .5cm;
+  margin: 0cm auto;
+  border: 1px #D3D3D3 solid;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* .nkpageland {
+  width: 25cm;
+  min-height: 20cm;
+  padding: .5cm;
+  margin: 1cm auto;
+  border: 1px #D3D3D3 solid;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+} */
+
+
+#nrTable input {
+	display:none;	
+}
+
+.nrWatermarkBase {
+    position:absolute;
+    z-index:-1;
+    background:white;
+    height:auto; 
+    max-width:96%;
+    width:96%;
+    overflow:hidden;
+    text-align: left;
+	white-space: normal;
+	word-wrap:break-work;
+	word-break:break-all;
+	display:inline-table;
+}
+
+.nrWatermarkBase p {
+    color:black;
+    opacity: 0.2;
+    font-size:24px;
+    padding-left:5px;
+    padding-top:12px;
+    padding-bottom:12px;
+    font-family: "Courier New";
+}
+
+
+.nrWatermarkText {
+    color:black;
+    opacity: 0.2;
+    font-size:24px;
+    padding-left:25px;
+    padding-top:12px;
+    padding-bottom:12px;
+    font-family: "Courier New";
+    -webkit-transform:rotate(-45deg);
+	-moz-transform:rotate(-45deg);
+	-ms-transform:rotate(-45deg);
+    
+}
+
+.nrProcessingDiv {
+	border:5px solid #ff9933;
+	position:fixed;
+ 	left:calc(50% - 250px);
+	top:calc(50% - 80px);
+ 	width:500px;
+	height:80px;	
+	/* background-image:linear-gradiant(#ff9933,white,green); */
+	background-color:khaki;
+	border-radius:10px;
+	z-index: 99;
+}
+
+#nrProcessingMsg{
+	width:500px;
+	height:80px;
+	z-index:99;
+	color:navy;
+	text-align:center;
+	Font-Size:24px;
+	font-weight:bold;
+	line-height: 70px !important;
+}
+
+.nrTableLineData {
+	Font-Size:12px;
+	line-height:1.3;
+	color:black;
+	table-layout:fixed;
+	border-collapse: collapse;
+	white-space: normal;
+	/* border:1px solid red;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px; 
+ 	border-width:thin;*/
+}
+
+.nrTable1 {
+	border-collaspe: collaspe;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.nrGroupHeading {
+	color:black;
+	Text-align:CENTER;
+	Font-Size:12px;
+	font-weight:bold;
+	text-decoration:underline;
+	padding:0px;
+	line-height:1.3;
+}
+
+Table .nrTableDataHead thead {
+	width:96%;
+	color: black;	
+	Text-align:center;
+	Font-Size:12px;
+	border:1px solid black;
+	table-layout:fixed;
+	border-collapse: collapse;
+  	border-style: solid;
+  	border-width: 1px 1px 1px 1px;
+  	border-width:thin;
+  	min-height:100px;
+}
+
+Table .nrTableDataHead .nrTableData tr td {
+	line-height:100%;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left: 2px; 
+	white-space: normal;
+	word-wrap: break-word;
+	border-collapse: collapse;
+}
+
+Table .nrTableDataHead th {
+	min-height:30px;
+	line-height:100%;
+	padding-top:7px;
+	padding-bottom:7px;
+	padding-left: 2px; 
+	white-space: normal;
+	word-wrap: break-word;
+	border:1px solid black;
+}
+
+
+Table .nrTableDataHead .nrTableData tr td {
+	line-height:100%;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left: 2px; 
+	white-space: normal;
+	word-wrap: break-word;
+	border:1px solid black;
+}
+
+Table .nrTableData thead {
+	width:100%;
+	border-collapse: collapse;
+	table-layout:fixed;
+	box-sizing:border-box;
+}
+	Table .nrTableData th {
+		font-size: 0px;
+	}
+
+Table .nrTableData thead {
+	border-spacing: 1px;	
+	border-collapse: collapse;
+	Text-align:center;
+	Font-Size:2px;
+	white-space: wrap;
+}
+
+.nrTableData{
+	width: 100%;
+}
+
+
+body {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
